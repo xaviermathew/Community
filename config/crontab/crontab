@@ -1,0 +1,5 @@
+MAILTO=example@example.com
+SHELL=/bin/bash
+
+00 00 * * * cd /home/ubuntu/virtual_env/community/bin/python && source activate && source postactivate && python -m community.commands.crawl_tweets > logs/crawl_tweets.log 2>&1
+00 01 * * * cd /home/ubuntu/virtual_env/community/bin/python && source activate && source postactivate && python -m community.commands.crawl_github > logs/crawl_github.log 2>&1

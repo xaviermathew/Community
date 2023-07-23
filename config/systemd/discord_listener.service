@@ -1,0 +1,14 @@
+[Unit]
+Description=discord listener
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/Community
+ExecStart=/home/ubuntu/Community/scripts/start_discord_listener.sh startstop
+ExecStop=/home/ubuntu/Community/scripts/start_discord_listener.sh stop
+ExecReload=/home/ubuntu/Community/scripts/start_discord_listener.sh startstop
+
+[Install]
+WantedBy=multi-user.target

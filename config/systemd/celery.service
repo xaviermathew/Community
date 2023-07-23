@@ -1,0 +1,14 @@
+[Unit]
+Description=celery
+
+[Service]
+Type=forking
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/Community
+ExecStart=/home/ubuntu/Community/scripts/start_celery.sh start
+ExecStop=/home/ubuntu/Community/scripts/start_celery.sh stopwait
+ExecReload=/home/ubuntu/Community/scripts/start_celery.sh restart
+
+[Install]
+WantedBy=multi-user.target
